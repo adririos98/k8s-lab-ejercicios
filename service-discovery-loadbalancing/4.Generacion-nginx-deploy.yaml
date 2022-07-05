@@ -6,6 +6,7 @@ metadata:
     app: nginx
   name: nginx
 spec:
+  replicas: 3
   ports:
   - port: 80
     protocol: TCP
