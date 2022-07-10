@@ -4,13 +4,13 @@ metadata:
   creationTimestamp: null
   name: app
 spec:
-  volumes:
-    - name: configpvc #kokoref
-      persistenVolumeClaim:
-        claimName: pv01 # reference the pvc name (pv01)
   containers:
     - image: nginx
       name: app
       volumeMounts:
         - name: configpvc #kokoref
           mountPath: "/data/app/config"
+  volumes:
+    - name: configpvc #kokoref
+      persistentVolumeClaim:
+        claimName: pv01 # reference the pvc name (pv01)
