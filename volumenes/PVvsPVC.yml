@@ -15,11 +15,11 @@ spec:
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-      name: pv01
+      name: pv01 #link to PV create
 spec:
    accessModes: # defines the rights of the volume we are creating
       - ReadWriteMany
-   resources: # defines the capacity of PV we are creating
-       requests: 10Gi #the amount of storage we are tying to claimç
-         storage: 256m
+   resources:
+       requests:
+         storage: 256m #Max 10GBi
    storageClassName: shared
