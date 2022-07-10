@@ -1,0 +1,25 @@
+#Parte de administrador
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+      name: pv01
+spec:
+   capacity: # defines the capacity of PV we are creating
+       storage: 10Gi #the amount of storage we are tying to claim
+   accessModes: # defines the rights of the volume we are creating
+      - ReadWriteOnce
+      hostPath:
+         path: "/tmp/data01" # path to which we are creating the volume
+---
+#Parte del desarrollador o usuario.
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+      name: pv01
+spec:
+   accessModes: # defines the rights of the volume we are creating
+      - ReadWriteMany
+   resources: # defines the capacity of PV we are creating
+       requests: 10Gi #the amount of storage we are tying to claimç
+         storage: 256m
+   storageClassName: shared
