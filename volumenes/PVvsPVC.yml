@@ -23,4 +23,6 @@ spec:
   resources:
     requests:
       storage: 500Mi #Max 10GBi (500Mi)
+    limit:
+      storage: 500Mi #Max 10GBi (500Mi)
   storageClassName: shared
