@@ -22,5 +22,5 @@ spec:
     - ReadWriteMany
   resources:
     requests:
-      storage: 1Gi #Max 10GBi
+      storage: 500Mi #Max 10GBi (500Mi)
   storageClassName: shared
