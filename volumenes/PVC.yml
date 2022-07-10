@@ -1,0 +1,12 @@
+#Parte del desarrollador o usuario.
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+      name: pv01 #link to PV create
+spec:
+   accessModes: # defines the rights of the volume we are creating
+      - ReadWriteMany
+   resources:
+       requests:
+         storage: 256m #Max 10GBi
+   storageClassName: shared
