@@ -12,5 +12,5 @@ spec:
     - image: nginx
       name: app
       volumeMounts:
-        - mountPath: "/data/app/config"
-          name: configpvc #kokoref
+        - name: configpvc #kokoref
+          mountPath: "/data/app/config"
