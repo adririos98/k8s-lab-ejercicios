@@ -16,7 +16,7 @@ spec:
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: pv01 #link to PV create
+  name: pvc01 #link to PV create
 spec:
   accessModes: # defines the rights of the volume we are creating
     - ReadWriteMany
