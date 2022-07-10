@@ -10,6 +10,7 @@ spec:
      - ReadWriteOnce
    hostPath:
      path: "/tmp/data01" # path to which we are creating the volume
+   storageClassName: shared
 ---
 #Parte del desarrollador o usuario.
 apiVersion: v1
